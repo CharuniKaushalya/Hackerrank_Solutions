@@ -1,0 +1,1 @@
+select city from station where SUBSTRING(city, 1, 1) in ('a','e','i','o','u');
