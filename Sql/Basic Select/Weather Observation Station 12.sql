@@ -1,0 +1,1 @@
+select distinct city from station where LEFT(city, 1) not in ('a','e','i','o','u') and RIGHT(city, 1) not in ('a','e','i','o','u');
