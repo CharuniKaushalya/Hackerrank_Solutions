@@ -5,16 +5,18 @@ import os
 import random
 import re
 import sys
+# print(sum(s <= a + i <= t for i in apple))
+# print(sum(s <= b + i <= t for i in orange))
 
 # Complete the countApplesAndOranges function below.
 def countApplesAndOranges(s, t, a, b, m, n, apples, oranges):
     counta = 0
     countb = 0
-    for i in range(m):
-        if apples[i]+a in range(s,t+1):
+    for i in apples:
+        if i+a in range(s,t+1):
             counta = counta+1
-    for j in range(n):
-        if oranges[j]+b in range(s,t+1):
+    for j in oranges:
+        if j+b in range(s,t+1):
             countb = countb +1    
     print(counta)
     print(countb)      
