@@ -8,12 +8,7 @@ import sys
 
 # Complete the kangaroo function below.
 def kangaroo(x1, v1, x2, v2):
-    a = list(range(x1,10000,v1))
-    b = list(range(x2,10000,v2))
-    if len([i for i, j in zip(a, b) if i == j]) > 0 :
-        print("YES")
-    else:
-        print("NO")
+    return 'YES' if  (v1 - v2) > 0 and ((x2 - x1) % (v1 - v2) == 0) else 'NO'
 
 if __name__ == '__main__':
 
@@ -28,3 +23,4 @@ if __name__ == '__main__':
     v2 = int(x1V1X2V2[3])
 
     result = kangaroo(x1, v1, x2, v2)
+    print(result)
