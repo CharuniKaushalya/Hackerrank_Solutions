@@ -8,8 +8,11 @@ import sys
 
 # Complete the birthday function below.
 def birthday(n, s, d, m):
+    # # List comprehention answer
+    # countlist = sum([(sum(s[i:i+m]) == d) for i in range(n - m +1)] )
+    # print(countlist)
     count = 0
-    for i in range(n):
+    for i in range(n-m+1):
         if(sum(s[i:i+m]) == d):
             count +=1
     print(count)
